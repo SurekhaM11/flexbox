@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="chatgpt-styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura Lt BT:wght@300&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura Bk BT:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500;600&display=swap" />
+    <title>Loading Page</title>
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script>
+        window.addEventListener("load", function () {
+            checkServerStatus();
+            setInterval(checkServerStatus, 1000);
+            conversationId = newConversation();
+            localStorage.setItem("homeId", conversationId);
+            conversationId = newConversation();
+            localStorage.setItem("uncensoredId", conversationId);
+
+        });
+
+        function newConversation() {
+            let id = Math.floor(Math.random() * 65000 + 1);
+
+            return id;
+        }
+
+        function checkServerStatus() {
+            fetch('http://localhost:9898/api/v1/info')
+                .then(function (response) {
+                    if (response.ok) {
+                        console.log('Server is ready');
+                        window.location.href = "home.html";
+                    } else {
+                        console.log('Server is not ready');
+                    }
+                })
+                .catch(function (error) {
+                    console.log('Error occurred while checking server status:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

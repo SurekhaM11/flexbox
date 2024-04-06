@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --medium-16-22-px-02-px: Sarabun;
+  --font-inter: Inter;
+  --font-futura-bk-bt: "Futura Bk BT";
+  --font-futura-lt-bt: "Futura Lt BT";
+
+  /* font sizes */
+  --font-size-smi-6: 12.6px;
+  --font-size-2xl-6: 21.6px;
+  --font-size-lg: 18px;
+  --medium-16-22-px-02-px-size: 16px;
+
+  /* Colors */
+  --color-white: #fff;
+  --balance: #e0e0e0;
+  --color-gray: #fffffe;
+  --available-balance: #ccc;
+
+  /* Gaps */
+  --gap-5xl: 24px;
+
+  /* border radiuses */
+  --br-xl-3: 20.3px;
+  --br-lg-1: 18.1px;
+  --br-7xs: 6px;
+}

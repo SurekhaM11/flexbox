@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="chatgpt-styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura Lt BT:wght@300&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Futura Bk BT:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sarabun:wght@500;600&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <title>Bella</title>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+
+    <div class="homedefault-container">
+
+        <div class="homedefault-homedefault">
+
+            <img src="chatGPT-assets/Image 7.png" alt="grid0118582" class="homedefault-grid011" />
+
+
+            <div class="desktop-6-child">
+
+
+                <div class="topbar">
+                    <div class="logo">
+                        <img src="chatGPT-assets/GPTAnonymous.svg" alt="GPTI1281" class="code-gpt" />
+                        <span class="logo-text">GPT Anonymous</span>
+                    </div>
+                    <div class="link-container">
+                        <a href="wallet.html" class="item">
+                            <div>Wallet</div>
+                        </a>
+                        <div class="item" onclick="openModel()">Buy Tokens</div>
+                        <a id="myAnchor" href="https://delighted.com/t/LeMCpLSk" target="_blank" class="item">
+                            <div>Feedback</div>
+                        </a>
+                        <div class="item2" id="bal-div">Balance: 0</div>
+                        <a href="settings.html"><img src="chatGPT-assets/settings1109-ca9f.svg" class="setting"
+                                alt="settings1109" /></a>
+                    </div>
+
+                </div>
+
+                <div class="mid-section">
+
+                    <div id="left-panel" class="homepage-emilyfagenstromhighresolutionzoomedoutpictureofapi">
+
+
+                        <div class="head">
+                            <!-- <img src="chatGPT-assets/aiessentialsiconset1109-efc.svg" alt="AIEssentialsIconSet1109"
+                                class="homepage-a-essentials-icon-set6"> -->
+                            <span class="text-ai">A.I. Chat</span>
+                        </div>
+                        <hr class="line">
+                        </hr>
+
+
+                        <a href="home.html" class="link1">
+                            <!-- <img src="chatGPT-assets/aiessentialsiconseti1538-bs2h.svg" alt="AIEssentialsIconSet1109"
+                                class="homepage-a-essentials-icon-set1" /> -->
+                            <div class="homepage-text54" style="color:rgb(136,156,231)"><span>Albert</div>
+                            <span class="badge" style="display: none;" id="bingCount"><span class="badge-text">
+                                    0</span></span>
+                        </a>
+
+
+                        <a href="uncensored.html" class="link2">
+                            <!-- <img src="chatGPT-assets/aiessentialsiconseti1538-ixd.svg" alt="AIEssentialsIconSet1109"
+                                class="homepage-a-essentials-icon-set3" /> -->
+                            <div class="homepage-text57" style="color:rgb(186,218,85)"><span>Bella</div>
+                            <span class="badge" style="display: none;" id="gptCount"><span
+                                    class="badge-text">0</span></span>
+                        </a>
+
+
+
+                    </div>
+
+
+                    <div class="homepage-rectangle783" id="chat-body">
+
+                        <div class="flexContainer">
+                            <!-- <div class=""> -->
+                            <!-- <img src="chatGPT-assets/aiessentialsiconseti1538-ixd.svg"
+                                        alt="AIEssentialsIconSet1109" class="homepage-a-essentials-icon-set2" /> -->
+                            <span class="homepage-text02">Bella: Anonymous A.I Chat</span>
+                            <button type="button" class="newconversation" onclick="conversationUncensored()">New
+                                Conversation</button>
+                            <!-- </div> -->
+                        </div>
+                        <hr class="line1">
+                        </hr>
+
+                        <div class="custom-scrollbar" id="messageTable">
+
+                            <table style="border-spacing: 10px;" class="m-table">
+                                <tbody>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                        <!-- <form> -->
+                        <div class="homepage-rectangle791">
+                            <!-- <div class="homepage-text04"> -->
+                            <input class="message" type="text" name="message" id="message">
+                            <div class="homepage-rectangle788" id="send-btn" onclick="postMessage()">
+                                <img src="chatGPT-assets/arrowup1538-08h.svg" alt="arrowup1538" class="arrowup" />
+                            </div>
+                        </div>
+
+
+                        <!-- </form> -->
+                    </div>
+
+                </div>
+
+
+
+                <hr class="frame-child">
+                </hr>
+                <div class="footer">
+                    <span class="footer-text00">
+                        @ 2023 RAIDAtech. All rights reserved
+                    </span>
+                    <a id="myAnchor1" href="http://www.gptanonymous.com/privacy" target="_blank"
+                        class="footer-text"><span>Privacy
+                            Policy &nbsp &nbsp Terms
+                            and Services</span></a>
+                </div>
+            </div>
+
+
+            <!-- <div id="modal">
+                <div src="chatGPT-assets/emilyfagenstromhighresolutionzoomedoutpictureofapi1109-nqvd-400h.png"
+                    alt="emilyfagenstromhighresolutionzoomedoutpictureofapi1109"
+                    class="code-emilyfagenstromhighresolutionzoomedoutpictureofapi1"></div>
+    
+                <div class="code-text17">
+                    <span class="code-text18">
+                        Click on the link below to buy tokens
+                    </span>
+                    <a href="https://www.ghostchats.com/" onclick="openInNewWindow(event)"><span
+                            class="code-text19">https://www.ghostchats.com/</span></a>
+                    <span>
+                        <br />
+                        <span></span>
+                        <br />
+                        <div>
+                            <button class="yellow-btn" id="buy-coins" onclick="closeModel()">Cancel</button>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            
+            <div id="modal-div" style="display: none;">
+                <div src="chatGPT-assets/emilyfagenstromhighresolutionzoomedoutpictureofapi1109-nqvd-400h.png"
+                    alt="emilyfagenstromhighresolutionzoomedoutpictureofapi1109"
+                    class="code-emilyfagenstromhighresolutionzoomedoutpictureofapi1"></div>
+
+                 <img src="chatGPT-assets/rectangle8101109-3du-300h.png" alt="Rectangle8101109" class="code-rectangle810" /> -->
+            <!-- <div class="code-text17">
+                    <span class="code-text18">
+                        A newer version is available. <br /> You can click on the link below to upgrade to the
+                        latest version
+                    </span>
+                    <a href="http://www.gptuncensored.com/" onclick="openInNewWindow(event)"><span class="code-text19">
+                            http://www.gptuncensored.com/</span></a>
+                    <button class="yellow-btn" onclick="closeModal()">Cancel</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div> -->
+
+</body>
+
+</html>
+
+<script>
+    window.addEventListener('load', function () {
+        getLocalMessages();
+    });
+
+    function conversationUncensored() {
+        let conversationId = Math.floor(Math.random() * 65000 + 1);
+        localStorage.setItem("uncensoredId", conversationId);
+        window.location.reload();
+    }
+
+    function closeModal() {
+        document.getElementById("modal-div").style.display = 'none'
+    }
+
+</script>
